@@ -12,4 +12,6 @@ RUN rm ./server/config/application_env; exit 0
 
 EXPOSE 12380
 
+ENV CONVERTER=/usr/local/bin/fb2c
+
 CMD node server --inpx=$INPX --lib-dir=$LIBDIR --fb2c=$CONVERTER
