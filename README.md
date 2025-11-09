@@ -406,6 +406,17 @@ node server --app-dir=.inpx-web
 
 <a id="development" />
 
+### Запуск через докер
+```sh
+docker run -d --name inpx-web \
+    --restart always \
+    -v /path/to/inpx-web-data:/usr/local/bin/.inpx-web \
+    -v /path/to/library:/data/library \
+    -e INPX=/data/library/your_library.inpx \
+    -e LIBDIR=/data/library/lib_dir \
+    -p 12380:12380 \
+    inpx-web
+```
 ### Разработка
 ```sh
 npm run dev
